@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/compare-the-triplets/problem
+# Keywords: compare elements in two int lists/arrays
+
 #!/bin/python3
 
 import os
