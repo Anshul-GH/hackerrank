@@ -1,32 +1,29 @@
 # https://www.hackerrank.com/challenges/the-birthday-bar/problem
 # Simple numerical counting logic based on constraints - learning to use arrays (lists)
 
-#!/bin/python3
+#!/bin/python
 
-import math
-import os
-import random
-import re
 import sys
 
-# Complete the solve function below.
 def solve(n, s, d, m):
+    # Define the variables
+    tmp_sum = 0
+    ch_cnt = 0
+    
+    for i in range(len(s)):
+        tmp_sum = 0
+        for j in range(m):
+            if(j+i < len(s)):
+                tmp_sum = tmp_sum+s[j+i]
+        if(tmp_sum == d):
+            ch_cnt += 1
+     
+    return ch_cnt
+            
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    n = int(input())
-
-    s = list(map(int, input().rstrip().split()))
-
-    dm = input().split()
-
-    d = int(dm[0])
-
-    m = int(dm[1])
-
-    result = solve(n, s, d, m)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+n = int(raw_input().strip())
+s = map(int, raw_input().strip().split(' '))
+d, m = raw_input().strip().split(' ')
+d, m = [int(d), int(m)]
+result = solve(n, s, d, m)
+print(result)
