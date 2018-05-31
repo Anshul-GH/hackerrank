@@ -1,4 +1,5 @@
 # https://www.hackerrank.com/challenges/solve-me-first/problem
+# Keywords: addition; integers; first code
 
 def solveMeFirst(a,b):
     # Hint: Type return a+b below
