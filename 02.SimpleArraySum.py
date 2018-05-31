@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/simple-array-sum/problem
+# Keywords: array; sum; 
+
 #!/bin/python3
 
 import os
